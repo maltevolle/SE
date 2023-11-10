@@ -1,7 +1,7 @@
 public class Kitchen extends Room{
     boolean stove;
-    public Kitchen(String name, boolean lightning, boolean stove) {
-        super(name, lightning);
+    public Kitchen(String name, boolean lighting, boolean stove) {
+        super(name, lighting);
         this.stove=stove;
     }
 

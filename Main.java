@@ -5,7 +5,7 @@ public class Main {
         Room currentRoom;
 
         Apartment apartment = new Apartment();
-        Kitchen kitchen = new Kitchen("kitchen",false,false);
+        Kitchen kitchen = new Kitchen("kitchen",false, false);
         Bathroom bathroom = new Bathroom("bathroom",false,false);
         Room hallway = new Room("hallway",false);
         apartment.addNewRoom(kitchen);

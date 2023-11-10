@@ -6,8 +6,7 @@ public class Apartment {
     }
 
     public void enter(){
-        System.out.println("You are in the hallway.");
-        System.out.println("What do you want to do?");
+
     }
     public void addNewRoom(Room newRoom){
         roomStack.add(newRoom);
