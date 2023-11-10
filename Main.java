@@ -11,6 +11,9 @@ public class Main {
         apartment.addNewRoom(kitchen);
         apartment.addNewRoom(bathroom);
         apartment.addNewRoom(hallway);
+        apartment.addNeighbour(hallway, kitchen);
+        System.out.println(apartment.getNeighbours(hallway));
+        System.out.println(apartment.getNeighbours(bathroom));
         currentRoom = hallway;
     }
 }
