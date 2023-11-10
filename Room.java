@@ -1,4 +1,4 @@
-public abstract class Room {
+public class Room {
     String name;
     boolean lighting;
     public Room(String name, boolean lighting) {
@@ -9,11 +9,6 @@ public abstract class Room {
         
     }
     public void switchLight(){
-        if (lighting){
-            lighting= false;
-        }
-        else {
-            lighting=true;
-        }
+        lighting = !lighting;
     }
 }

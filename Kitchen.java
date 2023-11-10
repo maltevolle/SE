@@ -15,12 +15,6 @@ public class Kitchen extends Room{
         super.switchLight();
     }
     public void switchStove(){
-        if (stove){
-            stove = false;
-            System.out.println("You used ...KWh");
-        }
-        else {
-            stove = true;
-        }
+        stove= !stove;
     }
 }
