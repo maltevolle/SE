@@ -12,11 +12,6 @@ public class Main {
         apartment.addNewRoom(hallway);
         apartment.addNeighbour(hallway, kitchen);
         apartment.addNeighbour(hallway, bathroom);
-        //System.out.println(apartment.getNeighbours(hallway)); testing
-        //System.out.println(apartment.getNeighbours(bathroom));
         kitchen.enter();
-        kitchen.switchStove();
-        Thread.sleep(6000);
-        kitchen.switchStove();
     }
 }

@@ -1,5 +1,5 @@
 public class Bathroom extends Room {
-    boolean shower;
+    static boolean shower;
     public Bathroom(String name, boolean lightning, boolean shower) {
         super(name, lightning);
         this.shower = shower;
@@ -14,7 +14,7 @@ public class Bathroom extends Room {
         super.switchLight();
     }
 
-    public void switchShower(){
+    public static void switchShower(){
         shower = !shower;
     }
 }
