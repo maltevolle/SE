@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class Apartment {
-    Stack<Room> roomStack = new Stack<>();
+    ArrayList<Room> rooms = new ArrayList<>();
     ArrayList<ArrayList<String>> neighbourRooms;
 
     public Apartment() {
@@ -14,8 +14,8 @@ public class Apartment {
     }
 
     public void addNewRoom(Room newRoom) {
-        roomStack.add(newRoom);
-        neighbourRooms.add(new ArrayList<>()); // Füge eine leere Liste für die Nachbarn des neuen Raums hinzu
+        rooms.add(newRoom);
+        neighbourRooms.add(new ArrayList<>());
     }
 
     public void addNeighbour(Room room1, Room room2) {
@@ -31,15 +31,15 @@ public class Apartment {
     }
 
     private int indexOfRoom(Room room) {
-        for (int i = 0; i < roomStack.size(); i++) {
-            if (roomStack.get(i).getName().equals(room.getName())) {
+        for (int i = 0; i < rooms.size(); i++) {
+            if (rooms.get(i).getName().equals(room.getName())) {
                 return i;
             }
         }
         return -1;  // Raum nicht gefunden
     }
 
-    public ArrayList<String> getNeighbours(Room room) {
+    public static ArrayList<String> getNeighbours(Room room) {
         return neighbourRooms.get(indexOfRoom(room));
     }
 }

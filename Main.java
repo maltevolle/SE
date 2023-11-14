@@ -1,8 +1,7 @@
 import java.util.Stack;
 
 public class Main {
-    public static void main(String[] args) {
-        Room currentRoom;
+    public static void main(String[] args) throws InterruptedException {
 
         Apartment apartment = new Apartment();
         Kitchen kitchen = new Kitchen("kitchen",false, false);
@@ -12,8 +11,12 @@ public class Main {
         apartment.addNewRoom(bathroom);
         apartment.addNewRoom(hallway);
         apartment.addNeighbour(hallway, kitchen);
-        System.out.println(apartment.getNeighbours(hallway));
-        System.out.println(apartment.getNeighbours(bathroom));
-        currentRoom = hallway;
+        apartment.addNeighbour(hallway, bathroom);
+        //System.out.println(apartment.getNeighbours(hallway)); testing
+        //System.out.println(apartment.getNeighbours(bathroom));
+        kitchen.enter();
+        kitchen.switchStove();
+        Thread.sleep(6000);
+        kitchen.switchStove();
     }
 }
